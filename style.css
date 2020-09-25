@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.GameOver {
+  display: none;
+  overflow: hidden;
+  width: 500px;
+  height: 200px;
+  border: 3px solid black;
+  margin: auto;
+  background-color: black;
+  z-index: -1;
+  text-align: center;
+}
+
+.GameOver h1 {
+  color: white;
+}
+
+.GameOver p {
+  color: white;
+}
+
+.Game {
+  display: block;
+  overflow: hidden;
+  width: 500px;
+  height: 200px;
+  border: 3px solid black;
+  margin: auto;
+  background-image: url("./src/background.gif");
+}
+
+.Cloud {
+  position: relative;
+  top: 20px;
+  left: 500px;
+  animation: cloud 25s infinite linear;
+}
+@keyframes cloud {
+  0% {
+    left: 380px;
+  }
+  100% {
+    left: -166px;
+  }
+}
+
+#Player {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 25px;
+  top: 133px;
+}
+
+.jumping {
+  animation: rotation 0.6s ease-in, jump 0.6s linear;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(-20deg);
+  }
+}
+@keyframes jump {
+  0% {
+    top: 132px;
+  }
+  10% {
+    top: 116px;
+  }
+  20% {
+    top: 106px;
+  }
+  30% {
+    top: 95px;
+  }
+  40% {
+    top: 90px;
+  }
+  45% {
+    top: 85px;
+  }
+  50% {
+    top: 83px;
+  }
+  55% {
+    top: 85px;
+  }
+  60% {
+    top: 105px;
+  }
+  70% {
+    top: 125px;
+  }
+  90% {
+    top: 128px;
+  }
+  100% {
+    top: 132px;
+  }
+}
+
+#Obstacle {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 130px;
+  left: 429px;
+  animation: obstacle 1.3s infinite linear;
+}
+@keyframes obstacle {
+  0% {
+    left: 325px;
+  }
+  100% {
+    left: -175px;
+  }
+}
+
+#scoreSpan {
+  text-align: center;
+}
