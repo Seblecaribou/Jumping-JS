@@ -1,7 +1,6 @@
 # Jumping-JS 
-##aka Seb's Adventure
+## aka Seb's Adventure
 ![WOUHOU!](https://i.imgur.com/2GzErVe.gif)
-
 ***
 
 A simple infinite runner, telling the story of a Lyon based dev, bicycling to find a job. Jump over the ducks to go as far as you can!
