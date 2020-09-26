@@ -7,4 +7,4 @@ A simple infinite runner, telling the story of a Lyon based dev, bicycling to fi
 
 Original code based of a [tutorial](https://www.youtube.com/c/KnifeCircus) by Shaun Beaton (original repo [here](https://github.com/Beat0154/easiest-game-ever))
 
-*All art and assets are mine, and cannot be used without my permission.*
+All art and assets are mine, and cannot be used without my permission.
