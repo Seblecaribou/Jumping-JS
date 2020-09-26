@@ -9,12 +9,16 @@ A simple infinite runner, telling the story of a Lyon based dev, bicycling to fi
 * Game Over when failling to jump over the duck ✓
 
 **Improvement:**
+
 UX/UI:
+
 * Animated characters ✓
 * Animated background ✓
 * A refresh button on Game-Over
 * A title screen
+
 Mechanics:
+
 * Change the hitbox system to an actual one
 * Add movement to the player character
 * Add a new ennemy
