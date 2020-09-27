@@ -4,6 +4,11 @@
   overflow-x: hidden;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 #titlescreen {
   margin-top: 10px;
 }
@@ -52,7 +57,7 @@ p {
 
 .TitleScreen img:nth-child(1) {
   position: relative;
-  top: 111px;
+  top: 110px;
   left: -22px;
   animation: movingright 0.8s ease-out;
 }
@@ -110,7 +115,7 @@ p {
   padding: 0;
   position: relative;
   left: 25px;
-  top: 133px;
+  top: 132px;
 }
 
 .jumping {
@@ -170,7 +175,7 @@ p {
   width: 20px;
   height: 20px;
   position: relative;
-  top: 130px;
+  top: 129px;
   left: 429px;
   animation: obstacle 1s infinite linear;
 }

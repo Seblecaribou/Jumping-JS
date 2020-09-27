@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" onclick="StartOrJump()">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Seb's Adventure</title>
@@ -18,7 +18,7 @@
     <source src="./src/8-Bit-Push-It-To-The-Limit.mp3" type="audio/mp3" />
   </audio>
 
-  <body>
+  <body onclick="OnClick()">
     <div class="TitleScreen">
       <img src="src/sebbike.gif" alt="player_img" />
       <img
@@ -28,19 +28,22 @@
       />
       <p id="clickstart">- click to START playing -</p>
     </div>
+
     <div class="GameOver">
       <img src="./src/gameoverblack.png" alt="Game Over" />
-      <p></p>
+      <p id="finalScore"></p>
       <form>
         <input type="image" src="./src/restart.gif" />
       </form>
     </div>
+
     <div class="Game">
       <img id="Player" src="./src/sebbike.gif" alt="player_img" />
       <img id="Obstacle" src="./src/duck.gif" alt="duck_img" />
     </div>
+
     <p id="scoreSpan"></p>
-    <input id="muteButton" type="image" src="./src/soundmute.png" />
+    <!-- <input id="muteButton" type="image" src="./src/soundmute.png" /> -->
   </body>
   <script src="./script.js"></script>
 </html>

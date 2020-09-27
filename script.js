@@ -1,66 +1,90 @@
 let titleScreen = true;
-let gameisover = false;
-// let isMute = false;
-const MuteButton = document.getElementById("muteButton");
+
 const pushItToTheLimit = document.getElementsByTagName("audio")[0];
+const MuteButton = document.getElementById("muteButton");
+
 const TitleScreenWindow = document.getElementsByClassName("TitleScreen")[0];
 const GameWindow = document.getElementsByClassName("Game")[0];
 const GameOver = document.getElementsByClassName("GameOver")[0];
+
 const Player = document.getElementById("Player");
 const Obstacle = document.getElementById("Obstacle");
+
+let score = 0;
 const scoreSpan = document.getElementById("scoreSpan");
-const finalCounter = document.getElementsByTagName("p")[1];
-let counter = 0;
+const finalScore = document.getElementById("finalScore");
 
-function Mute(event) {
-  event.preventDefault();
-  if (!isMute) {
-    MuteButton.src = "./src/soundmuted.png";
-    pushItToTheLimit.volume = 0;
-  } else {
-    MuteButton.src = "./src/soundmute.png";
-    pushItToTheLimit.volume = 0.2;
-  }
-}
-
-function StartOrJump() {
+function OnClick() {
   if (titleScreen) {
-    titleScreen = false;
-    TitleScreenWindow.style.display = "none";
-    GameWindow.style.display = "block";
+    Start();
   } else {
-    if (Player.classList == "jumping") {
-      return;
-    }
-    Player.classList.add("jumping");
-    setTimeout(() => {
-      Player.classList.remove("jumping");
-    }, 500);
+    Jump();
   }
 }
 
-const checkDead = setInterval(function () {
+function Start() {
+  titleScreen = false;
+  TitleScreenWindow.style.display = "none";
+  GameWindow.style.display = "block";
+}
+
+function Jump() {
+  if (Player.classList == "jumping") {
+    return;
+  }
+  Player.classList.add("jumping");
+  setTimeout(() => {
+    Player.classList.remove("jumping");
+  }, 500);
+}
+
+setInterval(function handleCollide() {
   if (!titleScreen) {
-    let playerTopValue = parseInt(
-      window.getComputedStyle(Player).getPropertyValue("top")
-    );
-    let obstcaleLeftValue = parseInt(
-      window.getComputedStyle(Obstacle).getPropertyValue("left")
-    );
-    if (
-      obstcaleLeftValue < 25 &&
-      obstcaleLeftValue > -75 &&
-      playerTopValue >= 133
-    ) {
-      gameisover = true;
-      const finalScore = Math.floor((counter - 1) / 100);
-      finalCounter.innerHTML = `You scored ${finalScore} points!`;
-      GameOver.style.display = "block";
-      GameWindow.style.display = "none";
-      scoreSpan.style.display = "none";
-    } else {
-      counter++;
-      scoreSpan.innerHTML = "Score: " + Math.floor(counter / 100);
+    if (CheckForCollision()) {
+      GameIsOver();
     }
   }
-}, 10);
+}, 1000 / 60);
+
+function CheckForCollision() {
+  let playerTopValue = parseInt(
+    window.getComputedStyle(Player).getPropertyValue("top")
+  );
+  let obstacleLeftValue = parseInt(
+    window.getComputedStyle(Obstacle).getPropertyValue("left")
+  );
+  if (
+    obstacleLeftValue < 25 &&
+    obstacleLeftValue > -75 &&
+    playerTopValue >= 132
+  ) {
+    return true;
+  } else {
+    IncrScore();
+  }
+}
+
+function GameIsOver() {
+  const lastScore = Math.floor((score - 1) / 60);
+  finalScore.innerHTML = `You scored ${lastScore} points!`;
+  GameOver.style.display = "block";
+  GameWindow.style.display = "none";
+  scoreSpan.style.display = "none";
+}
+
+function IncrScore() {
+  score += 1;
+  scoreSpan.innerHTML = "Score: " + Math.floor(score / 60);
+}
+
+// let isMute = false;
+// function Mute(event) {
+//   event.preventDefault();
+//   if (!isMute) {
+//     MuteButton.src = "./src/soundmuted.png";
+//     pushItToTheLimit.volume = 0;
+//   } else {
+//     MuteButton.src = "./src/soundmute.png";
+//     pushItToTheLimit.volume = 0.2;
+//   }
+// }
