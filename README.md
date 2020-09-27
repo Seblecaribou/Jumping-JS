@@ -31,8 +31,15 @@ Mechanics:
 Visual Improvements:
 
 * Create a title screen/logo ✓
-* Add a Game Over animation
+* Add a Game Over font and custom "restart" button ✓
 * Add a title screen animation
+* Add a Game Over animation
+
+Sound Improvements:
+
+* Add music
+* Add sounds for bike, duck, and collision
+
 
 ***
 
