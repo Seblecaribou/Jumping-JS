@@ -4,6 +4,10 @@
   overflow-x: hidden;
 }
 
+audio {
+  volume: 0.2;
+}
+
 #titlescreen {
   margin-top: 10px;
 }
@@ -47,15 +51,18 @@ p {
 .TitleScreen img:nth-child(1) {
   position: relative;
   top: 111px;
-  left: -23px;
-  animation: movingright 0.5s ease-out;
+  left: -22px;
+  animation: movingright 0.8s ease-out;
 }
 @keyframes movingright {
   0% {
     left: -95px;
   }
+  60% {
+    left: -15px;
+  }
   100% {
-    left: -23px;
+    left: -22px;
   }
 }
 
