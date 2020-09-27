@@ -48,6 +48,6 @@ Original code based of a [tutorial](https://www.youtube.com/c/KnifeCircus) by Sh
 
 Original music: 8-bits rendition of ***Push It To The Limit***, composed by Giorgio Moroder (version found [here](https://www.youtube.com/watch?v=PMewaU8ugzU), but can't find the credits for the remix)
 
-All art and assets are mine, and cannot be used without my permission.
+All arts and assets are mine, and cannot be used without my permission.
 
 
