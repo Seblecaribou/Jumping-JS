@@ -4,6 +4,11 @@
   overflow-x: hidden;
 }
 
+p {
+  margin: 2px;
+  font-family: "Press Start 2P", cursive;
+}
+
 .TitleScreen {
   display: block;
   overflow: hidden;
@@ -12,6 +17,7 @@
   border: 3px solid black;
   margin: auto;
   background-image: url("./src/backgroundfinalfat.gif");
+  text-align: center;
 }
 
 .GameOver {
@@ -123,5 +129,6 @@
 }
 
 #scoreSpan {
+  font-family: "Press Start 2P", cursive;
   text-align: center;
 }
