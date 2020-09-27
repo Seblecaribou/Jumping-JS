@@ -4,6 +4,16 @@
   overflow-x: hidden;
 }
 
+.TitleScreen {
+  display: block;
+  overflow: hidden;
+  width: 500px;
+  height: 200px;
+  border: 3px solid black;
+  margin: auto;
+  background-image: url("./src/backgroundfinalfat.gif");
+}
+
 .GameOver {
   display: none;
   overflow: hidden;
@@ -25,7 +35,7 @@
 }
 
 .Game {
-  display: block;
+  display: none;
   overflow: hidden;
   width: 500px;
   height: 200px;
@@ -33,21 +43,6 @@
   margin: auto;
   background-image: url("./src/backgroundfinalfat.gif");
 }
-
-/* .Cloud {
-  position: relative;
-  top: -15px;
-  left: 500px;
-  animation: cloud 40s infinite linear;
-}
-@keyframes cloud {
-  0% {
-    left: 380px;
-  }
-  100% {
-    left: -166px;
-  }
-} */
 
 #Player {
   margin: 0;
