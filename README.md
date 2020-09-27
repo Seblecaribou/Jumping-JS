@@ -22,7 +22,7 @@ Mechanics:
 
 * Change the hitbox system to an actual one
 * Add movement to the player character
-* Add a new ennemy
+* Add a new obstacle
 * Add a power-up
 
 ***
