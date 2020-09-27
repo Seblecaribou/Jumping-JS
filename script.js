@@ -9,12 +9,12 @@ const scoreSpan = document.getElementById("scoreSpan");
 const finalCounter = document.getElementsByTagName("p")[1];
 let counter = 0;
 
-function StartOrJumpOrRestart() {
+function StartOrJump() {
   if (titleScreen) {
     titleScreen = false;
     TitleScreenWindow.style.display = "none";
     GameWindow.style.display = "block";
-  } else if (!titleScreen) {
+  } else {
     if (Player.classList == "jumping") {
       return;
     }
@@ -22,9 +22,6 @@ function StartOrJumpOrRestart() {
     setTimeout(() => {
       Player.classList.remove("jumping");
     }, 500);
-  } else if (gameisover) {
-    window.location.reload();
-    return false;
   }
 }
 
