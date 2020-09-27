@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" onclick="StartOrJump()">
+<html lang="en" onclick="StartOrJumpOrRestart()">
   <head>
     <meta charset="UTF-8" />
     <title>Seb's Adventure</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="TitleScreen">
@@ -13,6 +17,9 @@
     <div class="GameOver">
       <h1>GAME OVER</h1>
       <p></p>
+      <form>
+        <input type="submit" value="Restart!" />
+      </form>
     </div>
     <div class="Game">
       <img id="Player" src="./src/sebbike.gif" alt="player_img" />

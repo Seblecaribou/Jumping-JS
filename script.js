@@ -1,4 +1,5 @@
 let titleScreen = true;
+let gameisover = false;
 const TitleScreenWindow = document.getElementsByClassName("TitleScreen")[0];
 const GameWindow = document.getElementsByClassName("Game")[0];
 const GameOver = document.getElementsByClassName("GameOver")[0];
@@ -8,12 +9,12 @@ const scoreSpan = document.getElementById("scoreSpan");
 const finalCounter = document.getElementsByTagName("p")[1];
 let counter = 0;
 
-function StartOrJump() {
+function StartOrJumpOrRestart() {
   if (titleScreen) {
     titleScreen = false;
     TitleScreenWindow.style.display = "none";
     GameWindow.style.display = "block";
-  } else {
+  } else if (!titleScreen) {
     if (Player.classList == "jumping") {
       return;
     }
@@ -21,8 +22,12 @@ function StartOrJump() {
     setTimeout(() => {
       Player.classList.remove("jumping");
     }, 500);
+  } else if (gameisover) {
+    window.location.reload();
+    return false;
   }
 }
+
 const checkDead = setInterval(function () {
   if (!titleScreen) {
     let playerTopValue = parseInt(
@@ -36,8 +41,9 @@ const checkDead = setInterval(function () {
       obstcaleLeftValue > -75 &&
       playerTopValue >= 133
     ) {
+      gameisover = true;
       const finalScore = Math.floor((counter - 1) / 100);
-      finalCounter.innerHTML = `Your scored ${finalScore} points!`;
+      finalCounter.innerHTML = `You scored ${finalScore} points!`;
       GameOver.style.display = "block";
       GameWindow.style.display = "none";
       scoreSpan.style.display = "none";
