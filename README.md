@@ -30,7 +30,7 @@ Mechanics:
 
 Visual Improvements:
 
-* Create a title screen/logo
+* Create a title screen/logo ✓
 * Add a Game Over animation
 * Add a title screen animation
 
