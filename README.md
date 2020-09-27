@@ -16,7 +16,7 @@ UX/UI:
 
 * Animated characters ✓
 * Animated background ✓
-* A refresh button on Game-Over
+* A refresh button on Game-Over ✓
 * A title screen ✓
 
 Mechanics:
@@ -26,6 +26,13 @@ Mechanics:
 * Add a new obstacle
 * Add a power-up
 * Add a difficulty setting
+* Change the restart button code
+
+Visual Improvements:
+
+* Create a title screen/logo
+* Add a Game Over animation
+* Add a title screen animation
 
 ***
 
