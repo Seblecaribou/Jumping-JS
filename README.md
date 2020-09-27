@@ -25,6 +25,7 @@ Mechanics:
 * Add movement to the player character
 * Add a new obstacle
 * Add a power-up
+* Add a difficulty setting
 
 ***
 
