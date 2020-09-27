@@ -17,7 +17,7 @@ UX/UI:
 * Animated characters ✓
 * Animated background ✓
 * A refresh button on Game-Over
-* A title screen
+* A title screen ✓
 
 Mechanics:
 
