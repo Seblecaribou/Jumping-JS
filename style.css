@@ -4,8 +4,43 @@
   overflow-x: hidden;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#titlescreen {
+  margin-top: 10px;
+}
+
+#muteButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#clickstart {
+  filter: opacity(100%);
+  position: relative;
+  bottom: -50px;
+  text-shadow: 1px 1px white;
+  animation: blinking 0.7s infinite;
+}
+@keyframes blinking {
+  0% {
+    filter: opacity(100%);
+  }
+  60% {
+    filter: opacity(100%);
+  }
+  100% {
+    filter: opacity(0%);
+  }
+}
+
 p {
   margin: 2px;
+  font-size: 0.5em;
   font-family: "Press Start 2P", cursive;
 }
 
@@ -20,6 +55,29 @@ p {
   text-align: center;
 }
 
+.TitleScreen img:nth-child(1) {
+  position: relative;
+  top: 110px;
+  left: -22px;
+  animation: movingright 0.8s ease-out;
+}
+@keyframes movingright {
+  0% {
+    left: -95px;
+  }
+  60% {
+    left: -15px;
+  }
+  100% {
+    left: -22px;
+  }
+}
+
+.TitleScreen img:nth-child(2) {
+  position: relative;
+  transform: translate(-50px);
+}
+
 .GameOver {
   display: none;
   overflow: hidden;
@@ -27,17 +85,19 @@ p {
   height: 200px;
   border: 3px solid black;
   margin: auto;
-  background-color: black;
+  background-image: url("./src/backgroundfinalfat.gif");
   z-index: -1;
   text-align: center;
 }
 
-.GameOver h1 {
-  color: white;
+.GameOver img {
+  margin: 10px;
 }
 
 .GameOver p {
-  color: white;
+  margin: 35px;
+  color: black;
+  text-shadow: 1px 1px white;
 }
 
 .Game {
@@ -55,7 +115,7 @@ p {
   padding: 0;
   position: relative;
   left: 25px;
-  top: 133px;
+  top: 132px;
 }
 
 .jumping {
@@ -115,7 +175,7 @@ p {
   width: 20px;
   height: 20px;
   position: relative;
-  top: 130px;
+  top: 129px;
   left: 429px;
   animation: obstacle 1s infinite linear;
 }

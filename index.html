@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" onclick="StartOrJump()">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Seb's Adventure</title>
@@ -8,24 +8,42 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+
+  <audio autoplay="true" loop="true">
+    <source src="./src/8-Bit-Push-It-To-The-Limit.mp3" type="audio/mp3" />
+  </audio>
+
+  <body onclick="OnClick()">
     <div class="TitleScreen">
-      <h1>TITLE SCREEN PLACEHOLDER</h1>
-      <p>click to START playing</p>
+      <img src="src/sebbike.gif" alt="player_img" />
+      <img
+        id="titlescreen"
+        src="src/titlescreen.gif"
+        alt="Seb's Adventure title screen"
+      />
+      <p id="clickstart">- click to START playing -</p>
     </div>
+
     <div class="GameOver">
-      <h1>GAME OVER</h1>
-      <p></p>
+      <img src="./src/gameoverblack.png" alt="Game Over" />
+      <p id="finalScore"></p>
       <form>
-        <input type="submit" value="Restart!" />
+        <input type="image" src="./src/restart.gif" />
       </form>
     </div>
+
     <div class="Game">
       <img id="Player" src="./src/sebbike.gif" alt="player_img" />
       <img id="Obstacle" src="./src/duck.gif" alt="duck_img" />
     </div>
+
     <p id="scoreSpan"></p>
+    <!-- <input id="muteButton" type="image" src="./src/soundmute.png" /> -->
   </body>
   <script src="./script.js"></script>
 </html>
