@@ -4,12 +4,14 @@
   overflow-x: hidden;
 }
 
-audio {
-  volume: 0.2;
-}
-
 #titlescreen {
   margin-top: 10px;
+}
+
+#muteButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 #clickstart {

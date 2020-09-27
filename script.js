@@ -1,5 +1,7 @@
 let titleScreen = true;
 let gameisover = false;
+// let isMute = false;
+const MuteButton = document.getElementById("muteButton");
 const pushItToTheLimit = document.getElementsByTagName("audio")[0];
 const TitleScreenWindow = document.getElementsByClassName("TitleScreen")[0];
 const GameWindow = document.getElementsByClassName("Game")[0];
@@ -10,7 +12,16 @@ const scoreSpan = document.getElementById("scoreSpan");
 const finalCounter = document.getElementsByTagName("p")[1];
 let counter = 0;
 
-pushItToTheLimit.volume = 0.2;
+function Mute(event) {
+  event.preventDefault();
+  if (!isMute) {
+    MuteButton.src = "./src/soundmuted.png";
+    pushItToTheLimit.volume = 0;
+  } else {
+    MuteButton.src = "./src/soundmute.png";
+    pushItToTheLimit.volume = 0.2;
+  }
+}
 
 function StartOrJump() {
   if (titleScreen) {
