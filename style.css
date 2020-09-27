@@ -4,8 +4,32 @@
   overflow-x: hidden;
 }
 
+#titlescreen {
+  margin-top: 10px;
+}
+
+#clickstart {
+  filter: opacity(100%);
+  position: relative;
+  bottom: -50px;
+  text-shadow: 1px 1px white;
+  animation: blinking 0.7s infinite;
+}
+@keyframes blinking {
+  0% {
+    filter: opacity(100%);
+  }
+  60% {
+    filter: opacity(100%);
+  }
+  100% {
+    filter: opacity(0%);
+  }
+}
+
 p {
   margin: 2px;
+  font-size: 0.5em;
   font-family: "Press Start 2P", cursive;
 }
 
