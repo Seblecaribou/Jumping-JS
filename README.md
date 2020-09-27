@@ -8,6 +8,7 @@ A simple infinite runner, telling the story of a Lyon based dev, bicycling to fi
 **MVP:**
 * Jumping when clicking ✓
 * Game Over when failling to jump over the duck ✓
+* A scoring system ✓
 
 **Improvement:**
 
