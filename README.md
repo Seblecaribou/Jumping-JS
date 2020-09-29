@@ -2,9 +2,10 @@
 ## aka Seb's Adventure
 ![Kwack!](https://i.imgur.com/GP8HGm8.gif) ![WOUHOU!](https://i.imgur.com/2GzErVe.gif)
 
-[PLAY NOW](https://seblecaribou.github.io/Jumping-JS/)
+--->[PLAY NOW!](https://seblecaribou.github.io/Jumping-JS/)<---
 
 A simple infinite runner, telling the story of a Lyon based dev, bicycling to find a job. Jump over the ducks to go as far as you can!
+Made in pure JavaScript, without canvas.
 ***
 
 **MVP:**
